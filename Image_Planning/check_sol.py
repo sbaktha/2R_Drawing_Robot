@@ -8,9 +8,10 @@ repeat_edge_string = "u\n"
 connect_edge_string = "u\n"
 draw_edge_string = "d\n"
 is_first_point = True
-name = 'square_mc'
+name_shape = 'clip'
+name = name_shape+'_mc'
 
-df = pd.read_csv('used_by_program/square.csv')
+df = pd.read_csv('used_by_program/'+name_shape+'.csv')
 # print(df)
 node_dic={}
 i=0
@@ -111,6 +112,8 @@ percent_accuracy = yes*100/(yes + no)
 str1 = 'visited '+str(yes) +' no of edges out of '+ str(yes + no) + '\n' +'This solution is: '+str(percent_accuracy)+' accurate'
 print(str1)
 print(did_not_visit)
-txt_file = open('final_solution.txt','w')
+txt_file = open('final/'+name+'_final_solution.txt','w')
+first_line='x1,y1,x2,y2,draw\n'
+txt_file.write(first_line)
 txt_file.write(final_sol)
 txt_file.close()

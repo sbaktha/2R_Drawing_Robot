@@ -13,7 +13,7 @@ import time
 import math
 import re
 verbose = True  # enable/disable verbose mode
-name = 'square_mc'
+name = 'clip_mc'
 g = Graph(filename="used_by_program/"+name)
 
 # configuration variables

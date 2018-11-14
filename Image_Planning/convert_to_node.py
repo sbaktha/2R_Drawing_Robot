@@ -1,6 +1,6 @@
 import pandas as pd
 import networkx as nx
-name = 'square'
+name = 'clip'
 df = pd.read_csv('used_by_program/'+name+'.csv')
 # print(df)
 node_dic={}
